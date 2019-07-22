@@ -56,6 +56,8 @@ class TableSelectCell extends React.Component {
     /** Is selectable option enabled */
     selectableOn: PropTypes.string,
     /** Select cell disabled on/off */
+     /** Column displayed in print */
+    print: PropTypes.bool.isRequired,
   };
 
   static defaultProps = {
@@ -75,6 +77,7 @@ class TableSelectCell extends React.Component {
       isRowExpanded,
       onExpand,
       isRowSelectable,
+      print,
       ...otherProps
     } = this.props;
 
@@ -84,6 +87,7 @@ class TableSelectCell extends React.Component {
       [classes.root]: true,
       [classes.fixedHeader]: fixedHeader,
       [classes.headerCell]: isHeaderCell,
+      'datatables-noprint': !print,
     });
 
     const iconClass = classNames({

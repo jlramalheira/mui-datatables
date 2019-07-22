@@ -179,6 +179,7 @@ class TableBody extends React.Component {
                     isRowExpanded={this.isRowExpanded(dataIndex)}
                     isRowSelectable={this.isRowSelectable(dataIndex)}
                     id={'MUIDataTableSelectCell-' + dataIndex}
+                    print={false}
                   />
                   {row.map(
                     (column, columnIndex) =>

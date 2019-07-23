@@ -220,6 +220,7 @@ class TableToolbar extends React.Component {
                   </Tooltip>
                 )}
                 content={() => this.props.tableRef()}
+                pageStyle={'@media print {html {width: 210mm; height: 297mm;}'}
               />
             </span>
           )}
